@@ -2,21 +2,11 @@
 
 namespace Admin;
 
-use Admin\Model\User;
-
+use Admin\Model\AdminTable;
+use Admin\Model\Admin;
+use Zend\Db\ResultSet\ResultSet;
 use Zend\Db\TableGateway\TableGateway;
 
-use Zend\Db\ResultSet\ResultSet;
-
-use Admin\Model\Content;
-
-use Admin\Model\ContentTable;
-
-use Zend\Authentication\Storage;
-use Zend\Authentication\AuthenticationService;
-use Zend\Authentication\Adapter\DbTable as DbTableAuthAdapter;
-
-use Admin\Model\UserTable;
 class Module
 {
 	public function getAutoloaderConfig()
@@ -38,5 +28,23 @@ class Module
 		return include __DIR__.'/config/module.config.php';
 	}
 	
-
+    public function getServiceConfig()
+    {
+        return array(
+            'factories'=> array(
+                'Admin\Model\AdminTable'=> function($sm)
+                {
+                    $tbGateway= $sm->get('AdminTableGateway');
+                    return new AdminTable($tbGateway);
+                },
+                'AdminTableGateway'=> function($sm)
+                {
+                    $dbAdapter= $sm->get('Zend\Db\Adapter\Adapter');
+                    $resultSetPrototype= new ResultSet();
+                    $resultSetPrototype->setArrayObjectPrototype(new Admin());
+                    return new TableGateway('user',$dbAdapter, null, $resultSetPrototype);
+                }
+            ),
+        );
+    }
 }

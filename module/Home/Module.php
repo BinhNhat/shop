@@ -2,21 +2,7 @@
 
 namespace Home;
 
-use Admin\Model\User;
 
-use Zend\Db\TableGateway\TableGateway;
-
-use Zend\Db\ResultSet\ResultSet;
-
-use Admin\Model\Content;
-
-use Admin\Model\ContentTable;
-
-use Zend\Authentication\Storage;
-use Zend\Authentication\AuthenticationService;
-use Zend\Authentication\Adapter\DbTable as DbTableAuthAdapter;
-
-use Admin\Model\UserTable;
 class Module
 {
 	public function getAutoloaderConfig()

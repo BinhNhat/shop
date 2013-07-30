@@ -6,4 +6,8 @@
  * Time: 12:35 PM
  * To change this template use File | Settings | File Templates.
  */
-echo $msg;
+foreach($msg as $m)
+{
+    echo $m->user_id .' | '. $m->user_name .' | '. $m->user_email;
+    echo "<br />";
+}
