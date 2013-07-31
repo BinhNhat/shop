@@ -42,7 +42,7 @@ class Module
                     $dbAdapter= $sm->get('Zend\Db\Adapter\Adapter');
                     $resultSetPrototype= new ResultSet();
                     $resultSetPrototype->setArrayObjectPrototype(new Admin());
-                    return new TableGateway('user',$dbAdapter, null, $resultSetPrototype);
+                    return new TableGateway('admin',$dbAdapter, null, $resultSetPrototype);
                 }
             ),
         );

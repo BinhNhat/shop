@@ -10,15 +10,15 @@ namespace Admin\Model;
 
 class Admin
 {
-    public $user_id;
-    public $user_name;
-    public $user_pass;
-    public $user_email;
+    public $id;
+    public $name;
+    public $pass;
+    public $mail;
     public function exchangeArray($data)
     {
-        $this->user_id = (isset($data['user_id']))? $data['user_id']: null;
-        $this->user_name = (isset($data['user_name']))?$data['user_name']: null;
-        $this->user_pass= (isset($data['user_pass']))? $data['user_pass']: null;
-        $this->user_email = (isset($data['user_email'])) ? $data['user_email']: null;
+        $this->id = (isset($data['id']))? $data['id']: null;
+        $this->name = (isset($data['name']))?$data['name']: null;
+        $this->pass= (isset($data['pass']))? $data['pass']: null;
+        $this->mail = (isset($data['mail'])) ? $data['mail']: null;
     }
 }
