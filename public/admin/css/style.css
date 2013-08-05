@@ -1,0 +1,66 @@
+*{margin: 0;padding: 0}
+.clear{clear: both;}
+.nav-top-fix{
+	background-image: url('../img/bg-topnav.png');
+	height: 40px;
+	color: #fff;
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 3000;
+}
+.nav-top-fix #logo{
+	float: left;
+}
+.nav-top-fix #inner-nav-top{
+	float: left;
+	height: 40px;
+}
+.nav-top-fix #inner-nav-top p{
+	float: left;
+	color: #fff;
+	height: 20px;
+	padding: 10px 5px;	
+}
+.nav-top-fix #inner-nav-top p:hover{
+	background: #7A7878;
+	cursor: pointer;
+}
+.nav-top-fix #inner-nav-top p #greeting{
+
+}
+.nav-top-fix #inner-nav-top p #logout{
+
+}
+/*...........................................*/
+
+#sidebar
+{		
+	width: 234px;
+	border-bottom: 3px solid #ECECEC;
+	float:left;
+	position: static;	
+	padding-top: 40px;
+}
+#sidebar .viewport { width: 214px; height: 500px; overflow: hidden; position: relative; }
+/*******************************************/
+    #scrollbar1 { width: 520px; margin: 20px 0 10px; }
+    .viewport { width: 500px; height: 200px; overflow: hidden; position: relative; }
+    .overview { list-style: none; position: absolute; left: 0; top: 0; }
+    .thumb .end,
+    .thumb { background-color: #808080; }
+    .thumb:hover {background-color: #413f3f;}
+    .thumb:hover .end{background-color: #413f3f;}
+    .scrollbar { position: relative; float: right; width: 15px; }
+    .track { background-color: #ECECEC; height: 100%; width:13px; position: relative; padding: 0 1px; }
+    .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+    .thumb .end { overflow: hidden; height: 5px; width: 13px; }    
+    .disable{ display: none; }
+    .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+/*...........................................*/
+#big-content
+{
+	padding-top: 40px;
+	margin-left: 235px;
+
+}    

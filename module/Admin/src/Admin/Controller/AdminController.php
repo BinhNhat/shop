@@ -39,4 +39,8 @@ class AdminController extends AbstractActionController
         );
         return new ViewModel($dataView);
     }
+    public function testAction()
+    {       
+        return new ViewModel();
+    }
 }
