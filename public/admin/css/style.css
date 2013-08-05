@@ -41,9 +41,11 @@
 	float:left;
 	position: static;	
 	padding-top: 40px;
+	height: 800px;
+	background: #123;
 }
-#sidebar .viewport { width: 214px; height: 500px; overflow: hidden; position: relative; }
-/*******************************************/
+/*#sidebar .viewport { width: 214px; height: 500px; overflow: hidden; position: relative; }
+/*******************************************
     #scrollbar1 { width: 520px; margin: 20px 0 10px; }
     .viewport { width: 500px; height: 200px; overflow: hidden; position: relative; }
     .overview { list-style: none; position: absolute; left: 0; top: 0; }
@@ -57,6 +59,71 @@
     .thumb .end { overflow: hidden; height: 5px; width: 13px; }    
     .disable{ display: none; }
     .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+...........................................*/
+#sidebar .side-nav
+{
+	list-style: none;
+	margin: 0;
+	border-top: #F78C05 solid 2px;
+}
+#sidebar .side-nav .item-side-nav
+{
+	min-height: 30px;
+	background: url('../img/bg-side-nav.png') #fff no-repeat;
+	/*padding: 10px 0px;*/
+	padding-top: 10px;
+	width: 234px;
+	list-style: none;
+}
+#sidebar .side-nav .item-side-nav:hover
+{
+	background: #fff url('../img/bg-side-nav-hover.png') no-repeat left top ;
+	cursor: pointer;
+}
+#sidebar .side-nav .item-side-nav a:hover  .item-side-nav
+{
+	background: #fff url('../img/bg-side-nav-hover.png') no-repeat left top ;
+}
+
+#sidebar .side-nav .item-side-nav a
+{
+	color: #fff;
+	text-decoration:none;
+	display: block;
+	padding-left: 15px;
+}
+#sidebar .side-nav .item-side-nav .sub-side-nav
+{
+	background: #fff;
+	margin-top: 10px;
+	display: none;
+	list-style: none;
+	margin-left: 0;
+	z-index: 0;
+
+}
+#sidebar .side-nav .item-side-nav .sub-side-nav .item-sub-side-nav
+{
+	
+	min-height: 30px;
+	/*padding: 10px 0px;*/
+	padding-top: 10px;
+	background: #000;
+	width: 100%;
+	border-bottom: #fff solid 1px;
+}
+#sidebar .side-nav .item-side-nav .sub-side-nav .item-sub-side-nav:hover
+{
+	
+	padding-top: 9px;
+	background: #D3CBCB;	
+	width: 100%;
+	border-bottom: #000 solid 1px;
+}
+#sidebar .side-nav .item-side-nav .sub-side-nav .item-sub-side-nav:hover a
+{
+	color: #000;
+}
 /*...........................................*/
 #big-content
 {
